@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HomeWork 1</title>
+</head>
+
+<script>
+notes = [];
+avgList = [];
+function add() {
+    note = {name: nm.value, midterm: parseInt(mdtrm.value), final: parseInt(fnl.value) };
+    notes.push(note);
+}
+function findMax() {
+    findMaxC.innerHTML = '';
+    var maxAvg = 0;
+    obj = {name: '', max: maxAvg};
+    for(let i of avgList){
+        if(i.average > maxAvg){
+            obj.name = i.name;
+            obj.maxAvg = i.average;
+            maxAvg = i.average;
+        }
+    }
+    if(maxAvg != 0 && maxAvg > 0){
+        findMaxC.innerHTML += '<p>' + obj.name + '&emsp;&emsp;' + obj.maxAvg +'</p>';
+    }
+}
+function findAvg() {
+    average.innerHTML = '';
+    var avrg = 0;
+    for(let i of notes){
+        avrg = (i.midterm/2) + (i.final/2);
+        average.innerHTML += '<p>' + i.name + '&emsp;&emsp;' + avrg + '</p>';
+        obj = {name: i.name, average: avrg}
+        avgList.push(obj);
+    }
+}
+function p() {
+    classes.innerHTML = '';
+    for(let i of notes){
+        classes.innerHTML += '<p>' + i.name +'&emsp;&emsp;'+ i.midterm + '&emsp;&emsp;&emsp;&emsp;' + i.final + '</p>';
+    }
+}
+</script>
+
+<body>
+    <h2 id=title>Add Course</h2>
+
+    <p id=outA></p>
+    <p>
+        <b>Name</b> &emsp;&emsp;<input type=text id=nm style="width:100px; margin-left: 6px;">
+    </p>
+    <p>
+        <b>Midterm</b> &emsp;<input type=number id=mdtrm style="width:100px;"> 
+    </p>
+    <p>
+        <b>Final</b> &emsp;&emsp;<input type=number id=fnl style="width: 100px; margin-left: 10px;">
+    </p>
+    <p>
+        <input type=button value="Add"  onClick="add()">
+    </p>
+    <p>
+        <input type=button value="Print" onClick="p()">
+        <input type=button value="Avg" onClick="findAvg()">
+        <input type=button value="Max" onClick="findMax()">
+    </p>
+    <hr />
+    <p>
+        <b>Name</b>&emsp;<b>Midterm</b> &emsp;<b>Final</b>
+        <p id=classes></p>
+    </p>
+    <hr />
+    <p>
+        <b>Name</b>&emsp;<b>Average</b>
+        <p id=average></p>
+    </p>
+    <hr />
+    <p>
+        <b>Name</b>&emsp;<b>Max</b>
+        <p id=findMaxC></p>
+    </p>
+</body>
+</html>
