@@ -60,8 +60,9 @@ class Distance {
 class CW4 extends Menu {
     constructor () {
         super()
-        this.student = new Student(1015, "Bedirhan Yıldırım", 2.0, this.ders);
-        this.course = new Course("Adv Prog", "15:00", new Date("2018-10-24"), ["B121"]);
+        var ders = new Course("Adv Prog", "15:00", new Date("2018-10-24"), ["B121"]);
+        this.student = new Student(1015, "Bedirhan Yıldırım", 2.0, ders);
+        this.course = ders;
         this.distance = new Distance(300);
         this.point = new Point(3,4);
         this.point3d = new Point3D(3,4,5);
