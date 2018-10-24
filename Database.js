@@ -53,7 +53,7 @@ class Distance {
     }
     static fromMiles(value) {
         let d = new Distance();
-        t.miles = value;
+        d.miles = value;
         return t;
     }
 }
