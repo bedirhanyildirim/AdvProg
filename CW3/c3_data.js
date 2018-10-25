@@ -18,9 +18,6 @@ function phi([n00, n01, n10, n11]) {
   function analyze(min=0) {
     let a = [];
     let counter = 0;
-    console.log(EVENTS);
-    console.log(JOURNAL);
-    console.log("-------------------------");
     for (let evt of EVENTS) {
         let cor = phi(tableFor(evt));
 
@@ -42,7 +39,6 @@ function phi([n00, n01, n10, n11]) {
         }
         counter = 0;
     }
-    console.log(a);
     return a
   }
   
