@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="database.js"></script>
+    <title>HomeWork 2</title>
+</head>
+
+<script>
+    c = new Database();
+</script>
+
+<body>
+    <h2 id=title>Add Course</h2>
+
+    <p id=outA></p>
+    <p>
+        <b>Name</b> &emsp;&emsp;<input type=text id=nm style="width:100px; margin-left: 6px;">
+    </p>
+    <p>
+        <b>Midterm</b> &emsp;<input type=number id=mdtrm style="width:100px;"> 
+    </p>
+    <p>
+        <b>Final</b> &emsp;&emsp;<input type=number id=fnl style="width: 100px; margin-left: 10px;">
+    </p>
+    <p>
+        <input type=button value="Add"  onClick="add()">
+    </p>
+    <p>
+        <input type=button value="Print" onClick="p()">
+        <input type=button value="Avg" onClick="findAvg()">
+        <input type=button value="Max" onClick="findMax()">
+    </p>
+    <hr />
+    <p>
+        <b>Name</b>&emsp;<b>Midterm</b> &emsp;<b>Final</b>
+        <p id=classes></p>
+    </p>
+    <hr />
+    <p>
+        <b>Name</b>&emsp;<b>Average</b>
+        <p id=average></p>
+    </p>
+    <hr />
+    <p>
+        <b>Name</b>&emsp;<b>Max</b>
+        <p id=findMaxC></p>
+    </p>
+</body>
+</html>
