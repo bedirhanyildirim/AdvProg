@@ -7,7 +7,7 @@ class Course {
     }
 
     toString () {
-        return this.code+''
+        return this.code + ''
     }
 }
 class Student {
@@ -18,7 +18,7 @@ class Student {
         this.courses = courses || []
     }
     toString () {
-        return this.id+''
+        return this.id + ''
     }
 }
 
@@ -49,9 +49,9 @@ class Database {
     }
 
     addCourses(txt) {
-        let msg = 'Courses: ' + txt.length + ' chars, ';
-        let a = txt.split('\n');
-        msg += a.length + ' lines';
+        let msg = 'Courses: ' + txt.length + ' chars, '
+        let a = txt.split('\n')
+        msg += a.length + ' lines'
         console.log(msg)
 
         //create course object
@@ -96,7 +96,28 @@ class Database {
         }
     }
 
-    toString (txt) {
-        return console.log(txt)
+    randomStudent () {
+        const keys = Array.from(this.students.keys())
+        return this.students.get(keys[Math.trunc(keys.length * Math.random())])
+    }
+
+    numberOfGivenGPA (gpa) {
+        const students = []
+        this.students.forEach( item => {if (item.gpa > gpa){students.push(item)} })
+        return students.length
+    }
+
+    coursesTakenByStudent (student) {
+        return student.courses
+    }
+
+    examSchedule (student) {
+        for (let course of student.courses) {
+            console.log(course.date +'\t'+ course.time +'\t'+ course.rooms)
+        }
+    } 
+
+    toString () {
+        return 'courses: ' + this.courses.size + ' , students: ' + this.students.size
     }
 }
