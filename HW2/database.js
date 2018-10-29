@@ -32,7 +32,7 @@ class Database {
     }
 
     readCourses () {
-        var url = "https://maeyler.github.io/JS/data/Courses.txt"
+        var url = "https://bedirhanyildirim.github.io/AdvProg/HW2/Courses.txt"
         fetch(url)
         .then(res => res.text()) 
         .then(res => [
@@ -41,7 +41,7 @@ class Database {
     }
 
     readStudents () {
-        var url = "https://maeyler.github.io/JS/data/Students.txt"
+        var url = "https://bedirhanyildirim.github.io/AdvProg/HW2/Students.txt"
         fetch(url)
         .then(res => res.text())
         .then(res => [
