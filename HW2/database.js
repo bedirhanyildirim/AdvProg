@@ -26,6 +26,7 @@ class Database {
     constructor () {
         this.courses = new Map()
         this.students = new Map()
+        this.rooms = new Map()
         this.readCourses()
         this.readStudents()
     }
@@ -67,6 +68,9 @@ class Database {
                 this.courses.set(courseList[stepper].code, courseList[stepper])
             }
         }
+
+        //find all rooms
+        this.findAllRooms()
     }
 
     addStudents (txt) {
@@ -94,11 +98,34 @@ class Database {
                 this.students.set(studentList[stepper].id, studentList[stepper])
             }
         }
+        document.getElementById("info").innerHTML += this.toString()
+    }
+
+    findAllRooms () {
+        this.courses.forEach(course => {
+            course.rooms.forEach(room => {
+                if(this.rooms.get(room) == undefined) {
+                    this.rooms.set(room, 1)
+                }else{
+                    this.rooms.set(room, this.rooms.get(room)+1)
+                }
+            })
+        })
     }
 
     randomStudent () {
         const keys = Array.from(this.students.keys())
         return this.students.get(keys[Math.trunc(keys.length * Math.random())])
+    }
+
+    randomCourse () {
+        const keys = Array.from(this.courses.keys())
+        return this.courses.get(keys[Math.trunc(keys.length * Math.random())])
+    }
+
+    randomRoom () {
+        const keys = Array.from(this.rooms.keys())
+        return keys[Math.trunc(keys.length * Math.random())]
     }
 
     numberOfGivenGPA (gpa) {
@@ -115,9 +142,31 @@ class Database {
         for (let course of student.courses) {
             console.log(course.date +'\t'+ course.time +'\t'+ course.rooms)
         }
-    } 
+    }
+
+    studentListGivenCourse (course) {
+        const studentList = []
+        this.students.forEach(student => { 
+            student.courses.forEach(a => {
+                a.code === course.code ? studentList.push(student) : null
+            })
+        })
+        return studentList
+    }
+
+    courseListGivenRoom (roomCode) {
+        const courseList = []
+        this.courses.forEach(course => {
+            course.rooms.includes(roomCode) ? courseList.push(course) : null
+        })
+        return courseList
+    }
+
+    courseCountGivenRoom (roomCode) {
+        return this.courseListGivenRoom(roomCode).length
+    }
 
     toString () {
-        return 'courses: ' + this.courses.size + ' , students: ' + this.students.size
+        return 'Courses: ' + this.courses.size + ' , Students: ' + this.students.size
     }
 }
