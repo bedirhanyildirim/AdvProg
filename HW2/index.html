@@ -141,7 +141,7 @@
     }
 
     function findRoom () {
-        var room = c.rooms.get(document.getElementById("rCode").value)
+        var room = document.getElementById("rCode").value
         if(room == undefined) {
             clearRoomInfo()
             document.getElementById("rQuery").innerHTML = 'There is no room has this Code'
