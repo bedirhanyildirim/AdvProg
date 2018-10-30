@@ -39,7 +39,7 @@
     }
 
     function findStudent () {
-        var student = c.students.get(document.getElementById("sID").value)
+        var student = c.students.get(arguments[0] === undefined ? document.getElementById("sID").value : arguments[0])
         if(student == undefined){
             clearStudentInfo()
             document.getElementById("query").innerHTML = 'There is no student has this ID'
@@ -70,12 +70,13 @@
         document.getElementById("coursesCount").innerHTML = '(Course count: '+ student.courses.length + ')'
         document.getElementById("sCourses").innerHTML = ''
         student.courses.forEach(course => {
-            document.getElementById("sCourses").innerHTML += '<li>'+course.code+'</li>'
+            document.getElementById("sCourses").innerHTML += '<li>' + course.code + '</li>'
             document.getElementById("eSchedule").innerHTML += '<tr id="'+course.code.toString()+'"><td>'+course.code+'</td>'+'<td>'+course.time+'</td>'+'<td>'+course.date+'</td>'+'<td></td></tr>'
             course.rooms.forEach(room => {
                 document.getElementById(course.code).lastChild.innerHTML += room + ', '
             })
         })
+        directToHref("student")
     }
 
     function clearStudentInfo () {
@@ -96,7 +97,7 @@
     }
 
     function findCourse () {
-        var course = c.courses.get(document.getElementById("cCode").value)
+        var course = c.courses.get(arguments[0] === undefined ? document.getElementById("cCode").value : arguments[0])
         if(course == undefined) {
             clearCourseInfo()
             document.getElementById("cQuery").innerHTML = 'There is no course has this Code'
@@ -121,6 +122,7 @@
         this.c.studentListGivenCourse(course).forEach(student => {
             document.getElementById("sList").innerHTML += '<tr id="'+student.id+'"><td>'+student.id+'</td><td>'+student.name+'</td><td>'+student.gpa+'</td></tr>'
         })
+        directToHref("course")
     }
 
     function clearCourseInfo () {
@@ -141,8 +143,8 @@
     }
 
     function findRoom () {
-        var room = document.getElementById("rCode").value
-        if(room == undefined) {
+        var room = arguments[0] === undefined ? document.getElementById("rCode").value : arguments[0]
+        if(room === undefined) {
             clearRoomInfo()
             document.getElementById("rQuery").innerHTML = 'There is no room has this Code'
         }else{
@@ -166,6 +168,7 @@
                 document.getElementById("room"+course.code).lastChild.innerHTML += room + ', '
             })
         })
+        directToHref("room")
     }
 
     function clearRoomInfo () {
@@ -176,6 +179,10 @@
         document.getElementById("rExamCount").innerHTML = ''
         document.getElementById("rExams").innerHTML = '<th>Code</th><th>Time</th><th>Date</th><th>Rooms</th>'
         
+    }
+
+    function directToHref (href) {
+        location.href = location.pathname + '#' + href
     }
 </script>
 
@@ -195,7 +202,7 @@
     </p>
     <p id="info"></p>
     <hr />
-    <h3>Student Infos</h3>
+    <h3 id="student">Student Infos</h3>
     <p id="query"></p>
     <p>
         <b>ID</b> &emsp;&emsp;<input type="text" id="sID" style="width:100px; margin-left: 28px;">&emsp;<input type="button" value="Find" onClick="findStudent()">
@@ -224,7 +231,7 @@
         </table>
     </p>
     <hr />
-    <h3>Course Info</h3>
+    <h3 id="course">Course Info</h3>
     <p id="cQuery"></p>
     <p>
         <b>Code</b> &emsp;&emsp;<input type="text" id="cCode" style="width:100px; margin-left: 10px;">&emsp;<input type="button" value="Find" onClick="findCourse()">
@@ -251,7 +258,7 @@
         </table>
     </p>
     <hr />
-    <h3>Room Info</h3>
+    <h3 id="room">Room Info</h3>
     <p id="rQuery"></p>
     <p>
         <b>Code</b> &emsp;&emsp;<input type="text" id="rCode" style="width:100px; margin-left: 10px;">&emsp;<input type="button" value="Find" onClick="findRoom()">
