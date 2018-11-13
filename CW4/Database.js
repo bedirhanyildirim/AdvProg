@@ -54,7 +54,7 @@ class Distance {
     static fromMiles(value) {
         let d = new Distance();
         d.miles = value;
-        return t;
+        return d;
     }
 }
 class CW4 extends Menu {
