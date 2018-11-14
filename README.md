@@ -7,7 +7,10 @@ Advanced Programming Cource homeworks and classworks will be in this repo.
 - Quiz - Week 4
 - [Class](https://bedirhanyildirim.github.io/AdvProg/CW4) - Week 5
 - [Read File](https://bedirhanyildirim.github.io/AdvProg/CW5) - Week 6
+- Midterm - Week 7
+- [Array vs Map](https://bedirhanyildirim.github.io/AdvProg/CW6) - Week 8
 
 ### HomeWorks
 - [Array](https://bedirhanyildirim.github.io/AdvProg/HW1)
 - [Read File](https://bedirhanyildirim.github.io/AdvProg/HW2)
+- [Animations](https://bedirhanyildirim.github.io/AdvProg/HW3)
