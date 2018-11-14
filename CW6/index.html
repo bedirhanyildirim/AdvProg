@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="database.js"></script>
+    <title>Set Intersection </title>
+
+<script>
+const url = "https://maeyler.github.io/JS/data/";
+const array = [], map = new Map(); rndArray = [];
+function readData(file) {
+    console.log("readData "+file);
+    fetch(url+file)
+        .then(r => r.text(), console.log)
+        .then(addStudents, console.log);
+}
+function parseStudent(line) {
+    let b = line.split("\t");
+    let id = b[0], name = b[1], gpa = b[2];
+    let std = new Student(id, name, gpa);
+    let list = [];
+    for (let i=3; i<b.length; i++) 
+        list.push(b[i]);
+    std.courses = list
+    return std
+}
+function addStudents(txt) {
+    let msg = "\nData contains ";
+    msg += txt.length+" chars, ";
+    let a = txt.split("\n");
+    msg += a.length+" lines \n";
+    for (let s of a) {
+      let std = parseStudent(s);
+      array.push(std.id);map.set(std.id, std);
+    }
+    msg += array.length+" students, "
+    msg += map.length+" distinct names"
+    out.innerText += msg
+}
+function arrayInclude(a, b) { //array
+    let counter = 0
+    for (var x of a)
+      if (b.includes(x)) counter++
+    return counter
+}
+function mapHas(a, b) { //map
+    let counter = 0
+    for (let x of a)
+      if (b.has(x)) counter++
+    return counter
+}
+
+function creatRandomArray () {
+    for (let i = 0; i<10000; i++) {
+        rndArray.push(Math.floor(Math.random()*1000000000) + '')
+    }
+    rndArray.push('212072192')
+    rndArray.push('716361570')
+}
+
+function timingArray(f) {
+    let t = performance.now()
+    let x = f(rndArray, array)  //calculate intersection by itself
+    t = performance.now() - t
+    let s = f.name+": "+t.toPrecision(3)+" msec "+x
+    out.innerText += "\n"+s; console.log(s)
+}
+function timingMap(f) {
+    let t = performance.now()
+    let x = f(rndArray, map)  //calculate intersection by itself
+    t = performance.now() - t
+    let s = f.name+": "+t.toPrecision(3)+" msec "+x
+    out.innerText += "\n"+s; console.log(s)
+}
+</script>
+</head>
+
+<body>
+<h2 id=title></h2>
+<button onClick='timingArray(arrayInclude)'>Array</button>
+<button onClick='timingMap(mapHas)'>Map</button>
+<p id=out>Class Work 6</p>
+<hr />
+<b>Sample code</b>
+<pre id=sample></pre>
+<hr />
+
+<script>
+    title.innerText = document.title;
+    sample.innerText = arrayInclude+"\n"+mapHas;
+    readData("Students.txt")
+    creatRandomArray()
+</script>
+
+</body>
+</html>
