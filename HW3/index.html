@@ -12,9 +12,19 @@
 <body>
     <div id="content">
         <h2 class="main-title">JavaScript Animations</h2>
+        <h4 class="section-title">Sample 1</h4>
         <div class="item-1">
             <span>Bedirhan Yıldırım</span>
         </div>
+        <hr style="margin-top: 110px">
+        <h4 class="section-title">Sample 2</h4>
+        <div class="item-2">
+            <div class="run">
+                <img class="sonic" src="./img/sonic.png" height="100">
+            </div>
+            <span>Fast <input type="range" id="speed" min="300" max="3000" onchange="console.log(this.value)" oninput="sampleTwoAnimation(this.value)"> Slow</span>
+        </div>
+        <hr style="margin-top: 10px">
     </div>
 </body>
 </html>

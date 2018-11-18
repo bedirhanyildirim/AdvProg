@@ -21,8 +21,29 @@ table,tr,td,ul,li,h1,h2,h3,h4,h5,h6,p,from,input,textarea {padding: 0; margin: 0
     border-bottom: 2px solid #f0db4f;
 }
 
+.section-title {
+    margin: 5px 0;
+}
+
 .item-1 {
     display: block;
     color: white;
     background-color: #f0db4f;
+}
+
+.item-1 span {
+    display: block;
+    padding: 10px 0;
+}
+
+.item-2 {
+    
+}
+
+.item-2 .run {
+    text-align: left;
+}
+
+.item-2 .sonic {
+    margin-top: 10px;
 }
