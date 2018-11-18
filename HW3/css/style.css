@@ -42,6 +42,7 @@ table,tr,td,ul,li,h1,h2,h3,h4,h5,h6,p,from,input,textarea {padding: 0; margin: 0
 
 .item-2 .run {
     text-align: left;
+    width: 100px;
 }
 
 .item-2 .sonic {
