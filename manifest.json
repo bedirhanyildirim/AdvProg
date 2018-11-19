@@ -1,0 +1,112 @@
+{
+    "dir": "ltr",
+    "lang": "English",
+    "name": "Advanced Programming - Bedirhan Yıldırım",
+    "scope": "/AdvProg/",
+    "display": "browser",
+    "start_url": "https://bedirhanyildirim.github.io/AdvProg/",
+    "short_name": "AdvProg",
+    "theme_color": "transparent",
+    "description": "Advanced Programming Cource homeworks and classworks will be in this project.",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/CW7/images/99960986-a549-8826-8d91-7966be1ffe3e.webPlatform.png",
+            "sizes": "44x44",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/4c548d52-bd47-217d-721c-658be21c97a8.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/1eeea61a-5011-95b0-489d-67eb5be0d745.webPlatform.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/c646069a-eb20-2b00-a787-82acb6b604ad.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/996dcaad-06c9-9fe9-5586-4b9c834a11b4.webPlatform.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/496583e3-8bfb-bb81-fb4b-ea55407fa5ff.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/a852e71c-93c7-9e77-1be2-8179c4622a23.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/cd244e23-ffb3-8a20-56db-159c1c8542e3.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/6fc6531e-0dd6-fb00-e6d2-cca56d95ee7c.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/8cd21679-2e9b-22b4-1cae-de6dcbd3e275.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/003dce2b-8668-0ed6-9d66-1b067b0e2d2e.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/0d5701a2-48e2-7185-6f76-19161389c3ab.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/ce29983b-47b4-2dd1-9d34-e5ee544863a9.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/907c846f-5c0f-7675-b95e-2acee4bb6a3c.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/8d28defd-23df-c31e-ad7f-b741fd5cabda.webPlatform.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/b67e3544-07f3-7304-43b9-91db0d0a7891.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/b73b9610-bdcc-04d3-97e3-1356109b27e2.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/c5647599-5fda-854f-e1d4-0affc00bf994.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "/CW7/images/2571d69a-0d17-e49d-9b80-0f7839d2f7f0.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ]
+}
