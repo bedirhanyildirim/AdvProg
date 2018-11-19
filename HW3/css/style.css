@@ -49,5 +49,48 @@ table,tr,td,ul,li,h1,h2,h3,h4,h5,h6,p,from,input,textarea {padding: 0; margin: 0
     padding: 0;
 }
 
-.item-2 .sonic {
+.item-3 {
+    position: relative;
+    margin-top: 10px;
+}
+
+.item-3 .start-race {
+    margin-top: 10px;
+    padding: 7px 20px;
+    color: #ffffff;
+    background-color: #323330;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+.item-3 .start-race:hover {
+    background-color: #f0db4f;
+    cursor: pointer;
+}
+
+.item-3 .start-race:disabled,
+.item-3 .start-race[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.item-3 .pist{
+    text-align: left;
+}
+
+.item-3 .pist .line {
+    border-bottom: 1px dashed #cccccc;
+}
+.item-3 .pist .line:first-child {
+    border-top: 1px dashed #cccccc;
+}
+
+.time {
+    padding: 25px;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
 }
