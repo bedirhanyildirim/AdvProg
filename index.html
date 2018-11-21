@@ -9,19 +9,11 @@
     <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
     <script src="CW4/Database.js"></script>
     <script>
-        //This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
-
-        //Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-        if (navigator.serviceWorker.controller) {
-        console.log('[PWA Builder] active service worker found, no need to register')
-        } else {
-
-        //Register the ServiceWorker
-        navigator.serviceWorker.register('CW7/sw.js', {
-            scope: './'
-        }).then(function(reg) {
-            console.log('Service worker has been registered for scope:'+ reg.scope);
-        });
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('https://bedirhanyildirim.github.io/AdvProg/sw.js')
+                .then((reg) => { console.log('SW Registered', reg) })
+                .catch(console.log)
         }
     </script>
     <style>
