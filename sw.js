@@ -1,5 +1,5 @@
 const CACHE ='AdvProg'
-const FILES = ['/JS/CW7/index.html', '/JS/CW7/database.js', '/JS/HW3/index.html']
+const FILES = ['/JS/CW7/', '/JS/HW3/', 'https://github.com/bedirhanyildirim/AdvProg']
 
 function installCB(e) {
   e.waitUntil(
