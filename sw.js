@@ -1,5 +1,5 @@
 const CACHE ='AdvProg'
-const FILES = ['/JS/CW7/', '/JS/HW3/', 'https://github.com/bedirhanyildirim/AdvProg/']
+const FILES = ['/AdvProg/CW7/index.html', '/AdvProg/HW1/index.html', '/AdvProg/HW2/index.html', '/AdvProg/HW3/index.html', 'https://github.com/bedirhanyildirim/AdvProg/']
 
 function installCB(e) {
   e.waitUntil(
@@ -9,16 +9,6 @@ function installCB(e) {
   )
 }
 self.addEventListener('install', installCB)
-
-function cacheCB(e) { //cache first
-  let req = e.request
-  e.respondWith(
-    caches.match(req)
-    .then(r1 => r1 || fetch(req))
-    .catch(console.log)
-  )
-}
-self.addEventListener('fetch', cacheCB)
 
 function save(req, resp) {
   return caches.open(CACHE)
