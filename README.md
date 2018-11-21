@@ -9,6 +9,7 @@ Advanced Programming Cource homeworks and classworks will be in this repo.
 - [Read File](https://bedirhanyildirim.github.io/AdvProg/CW5) - Week 6
 - Midterm - Week 7
 - [Array vs Map](https://bedirhanyildirim.github.io/AdvProg/CW6) - Week 8
+- [Table](https://bedirhanyildirim.github.io/AdvProg/CW7) - Week 9
 
 ### HomeWorks
 - [Array](https://bedirhanyildirim.github.io/AdvProg/HW1)
