@@ -1,8 +1,8 @@
 {
-    "name": "Adv Prog Course",
+    "name": "Adv Prog by Bedirhan Yıldırım",
     "start_url": "/AdvProg/index.html",
     "display": "standalone",
-    "background_color": "cyan",
+    "background_color": "white",
     "icons": [
         {
             "src": "icons/99960986-a549-8826-8d91-7966be1ffe3e.webPlatform.png",
