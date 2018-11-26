@@ -2,60 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#457cdb">
+    <meta name="Description" content="Here is the Advanced Programming Classwork Application!">
     <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="icons/icon192.png">
+    <link rel="icon" sizes="192x192" href="icons/icon192.png">
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker
-                .register('https://bedirhanyildirim.github.io/AdvProg/CW4/sw.js')
+                .register('https://bedirhanyildirim.github.io/AdvProg/sw.js')
                 .then((reg) => { console.log('SW Registered', reg) })
                 .catch(console.log)
         }
     </script>
     <style>
+        body {
+            margin: 0 auto;
+            font: 15px/19px Arial;
+            background-color: white;
+        }
+        header {
+            width: 400px;
+            color: white;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            margin-bottom: -20px;
+            background-color: #262626;
+        }
+        header h3 {
+            padding: 5px 0;
+            font-size: 14px;
+        }
         .links {
-            width: 372px;
+            width: 400px;
+            margin: 0 auto;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
             background-color: #f5f5f5;
             font-family: Arial, Helvetica, sans-serif;
         }
         .links h3 {
+            padding: 5px 0;
             font-size: 20px;
             color: #262626;
-            text-align: center;
-            padding: 5px 0;
             padding-bottom: 0;
+            text-align: center;
             margin-bottom: 10px;
         }
         .links h3:first-child {
             padding-top: 10px;
         }
         .links ul {
-            padding: 10px 5px;
-            padding-top: 0;
             margin-top: 0;
-            margin-left: 15px;
+            padding-top: 0;
             list-style: none;
+            padding: 10px 5px;
+            margin-left: 15px;
         }
         .links ul li {
             padding: 5px 0;
         }
         .links ul li a {
-            text-decoration: none;
             color: #3a80ba;
             font-weight: bold;
+            text-decoration: none;
         }
         .links ul li a:hover {
             color: #003142;
         }
+        footer {
+            width: 400px;
+            margin: 0 auto;
+            color: white;
+            display: block;
+            padding-top: 0px;
+            margin-top: -20px;
+            text-align: center;
+            background-color: #262626;
+        }
+        footer h5 {
+            font-size: 12px;
+            padding: 7px 0;
+            font-weight: normal;
+        }
     </style>
-    <title>Document</title>
+    <title>Adv Prog - Homepage</title>
 </head>
 <body>
+    <header>
+        <h3>Advanced Programming Classwork App</h3>
+    </header>
     <div class="links">
         <h3>GitHub</h3>
         <ul>
-            <li>Click <a href="https://github.com/bedirhanyildirim/AdvProg">here</a> for routing to repo on Github.</li>
+            <li>Click <a href="https://github.com/bedirhanyildirim/AdvProg" target="_blank">here</a> for routing to repo on Github.</li>
         </ul>
         <h3>Class Works</h3>
         <ul>
@@ -72,6 +115,15 @@
             <li><a href="https://bedirhanyildirim.github.io/AdvProg/HW2">Read File</a></li>
             <li><a href="https://bedirhanyildirim.github.io/AdvProg/HW3">Animations</a></li>
         </ul>
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="https://www.w3schools.com/" target="_blank">W3School</a></li>
+            <li><a href="https://developer.mozilla.org/tr/" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+        </ul>
     </div>
+    <footer>
+        <h5>© 2018 Bedirhan YILDIRIM, All Rights Reserved</h5>
+    </footer>
 </body>
 </html>
