@@ -24,9 +24,17 @@ class MyCache {
                     .then ( ns => {
                         this.urlArray.forEach(el => {
                             console.log(el)
-                            fetch(el+'/')
-                            .then(res => res.blob())
-                            .then(console.log(res.size + " : " + res.type))
+                            fetch(el)
+                            .then(function(res) {
+                                if (res.status !== 200) {
+                                    throw new Error("Not 200 response")
+                                } else {
+                                    res.blob()
+                                    .then(abc => {
+                                        console.log(abc)
+                                    })
+                                }
+                            })
                         })
                     })
             })
