@@ -10,6 +10,8 @@ Advanced Programming Cource homeworks and classworks will be in this repo.
 - Midterm - Week 7
 - [Array vs Map](https://bedirhanyildirim.github.io/AdvProg/CW6) - Week 8
 - [Table](https://bedirhanyildirim.github.io/AdvProg/CW7) - Week 9
+- [Read Cache](https://bedirhanyildirim.github.io/AdvProg/CW8) - Week 10
+- [Using SVG](https://bedirhanyildirim.github.io/AdvProg/CW9) - Week 11
 
 ### HomeWorks
 - [Array](https://bedirhanyildirim.github.io/AdvProg/HW1)

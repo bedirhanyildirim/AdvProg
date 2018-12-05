@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG and Canvas</title>
+    <style>
+        svg, canvas {
+            background: cyan;
+            font: 10px arial, sans-serif;
+        }
+        input[type=text]{
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        input[type=button] {
+            padding: 3px 5px;
+            margin-right: 3px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        input[type=button]:hover {
+            cursor: pointer;
+        }
+  </style>
+</head>
+<body>
+    <h2>Using SVG</h2>
+    <svg id='svg' width='340' height='100'>
+        <circle class="crc" cx='50' cy='50' r='40' style='fill:yellow;stroke:blue;stroke-width:4' />
+        <text x='35' y='55' fill='black'>Circle</text>
+        <rect class="rect" x='110' y='10' width='100' height='80' style='fill:pink;stroke:red;stroke-width:5' />
+        <text x='145' y='55' fill='blue'>Rect</text>
+    </svg>
+    <p>SVG elements are controllable and scalable</p>
+    <p>Pick a color: <input type="color" class="color" value="#ff0000" onchange="updateColor()">
+        <span class="showColor" style="margin-left: 5px">#ff0000</span>
+    </p>
+    <p>
+        <input type="button" value="BG color" onclick="BGcolor()">
+    </p>
+    <p>
+        <input type="button" value="Circle color" onclick="cBGcolor()">
+        <input type="button" value="Circle border color" onclick="cbBGcolor()">
+    </p>
+    <p>
+        <input type="button" value="Rect color" onclick="rBGcolor()">
+        <input type="button" value="Rect border color" onclick="rbBGcolor()">
+    </p>
+    <p>Set a value: <input type="text" class="val"></p>
+    <p>SVG: 
+        <input type="button" value="Width" onclick="svgWidth()">
+        <input type="button" value="Height" onclick="svgHeight()">
+    </p>
+    <p>Circle:
+        <input type="button" value="Radius" onclick="cRadius()">
+        <input type="button" value="X" onclick="crcX()">
+        <input type="button" value="Y" onclick="crcY()">
+        <input type="button" value="Stroke Width" onclick="crcSW()">
+    </p>
+    <p>Rect:
+        <input type="button" value="Width" onclick="rWid()">
+        <input type="button" value="Height" onclick="rHeig()">
+        <input type="button" value="X" onclick="rectX()">
+        <input type="button" value="Y" onclick="rectY()">
+        <input type="button" value="Stroke Width" onclick="rectSW()">
+    </p>
+    <hr />
+    <p>Ref: <i>Eloquent JavaScript</i>,
+        <a href="http://eloquentjavascript.net/17_canvas.html" target="ExternalDocument"> Chap 17</a>
+    </p>
+    <script>
+        var color = document.getElementsByClassName("color")[0]
+        var text = document.getElementsByClassName("val")[0]
+        function updateColor() {
+            document.getElementsByClassName("showColor")[0].innerHTML = color.value
+        }
+        function BGcolor() {
+            document.getElementById("svg").style.backgroundColor = color.value
+        }
+        function cBGcolor() {
+            document.getElementsByClassName("crc")[0].style.fill = color.value
+        }
+        function cbBGcolor() {
+            document.getElementsByClassName("crc")[0].style.stroke = color.value
+        }
+        function rBGcolor() {
+            document.getElementsByClassName("rect")[0].style.fill = color.value
+        }
+        function rbBGcolor() {
+            document.getElementsByClassName("rect")[0].style.stroke = color.value
+        }
+        function svgWidth() {
+            document.getElementById("svg").setAttribute("width", text.value)
+        }
+        function svgHeight() {
+            document.getElementById("svg").setAttribute("height", text.value)
+        }
+        function cRadius() {
+            document.getElementsByClassName("crc")[0].setAttribute("r", text.value)
+        }
+        function crcX() {
+            document.getElementsByClassName("crc")[0].setAttribute("cx", text.value)
+        }
+        function crcY() {
+            document.getElementsByClassName("crc")[0].setAttribute("cy", text.value)
+        }
+        function crcSW() {
+            document.getElementsByClassName("crc")[0].style.strokeWidth = text.value
+        }
+        function rectX() {
+            document.getElementsByClassName("rect")[0].setAttribute("x", text.value)
+        }
+        function rectY() {
+            document.getElementsByClassName("rect")[0].setAttribute("y", text.value)
+        }
+
+        function rWid() {
+            document.getElementsByClassName("rect")[0].setAttribute("width", text.value)
+        }
+        function rHeig() {
+            document.getElementsByClassName("rect")[0].setAttribute("height", text.value)
+        }
+        function rectSW() {
+            document.getElementsByClassName("rect")[0].style.strokeWidth = text.value
+        }
+    </script>
+
+</body>
+
+</html>
