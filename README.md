@@ -12,8 +12,13 @@ Advanced Programming Cource homeworks and classworks will be in this repo.
 - [Table](https://bedirhanyildirim.github.io/AdvProg/CW7) - Week 9
 - [Read Cache](https://bedirhanyildirim.github.io/AdvProg/CW8) - Week 10
 - [Using SVG](https://bedirhanyildirim.github.io/AdvProg/CW9) - Week 11
+- Term Project Work - Week 12
 
 ### HomeWorks
 - [Array](https://bedirhanyildirim.github.io/AdvProg/HW1)
 - [Read File](https://bedirhanyildirim.github.io/AdvProg/HW2)
 - [Animations](https://bedirhanyildirim.github.io/AdvProg/HW3)
+
+### Term Project
+- [Demo](http://fsmvu.com)
+- [Repository](https://github.com/bedirhanyildirim/student-clubs-otomation)
