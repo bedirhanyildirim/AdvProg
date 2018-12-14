@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Array Methods </title>
+    <title>Adv Prog | Array Methods</title>
+    <link rel="shortcut icon" href="../icons/icon192.png">
+    <link rel="icon" sizes="192x192" href="../icons/icon192.png">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
-
 <script>
 function modify() {
     let i = Number(ie.value); let x = xe.value; 
@@ -42,36 +44,46 @@ function unshift() {
 </script>
 
 <body>
-<h2 id=title></h2>
-
-<p id=outA></p>
-<p>
-i = <input type=number id=ie value=1  style="width:40px"> &emsp; 
-x = <input type=text id=xe value=53 style="width:99px"> 
-</p><p>
-<input type=button value="a[i]=x"  onClick="modify()">
-<input type=button value="remove"  onClick="remove()">
-<input type=button value="push x"  onClick="push()">
-<input type=button value="x=pop"   onClick="popA()">
-<p></p>
-<input type=button value="reverse" onClick="reverse()">
-<input type=button value="remove first" onClick="shift()">
-<input type=button value="fill x"  onClick="fill()">
-<input type=button value="add first x"  onClick="unshift()">
-</p>
-
-<hr />
-<p>Ref: 
-<a href="https://www.w3schools.com/js/js_arrays.asp" target="ExternalDocument">Array Examples</a></p>
-<p>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections" target="ExternalDocument">Set Examples</a>
-</p>
-
-<script>
-    title.innerText = document.title;
-    const a = ["234", 52, "abc"];  //initially
-    reportA("start");
-</script>
-
+    <header>
+        <div class="container">
+            <h3>Advanced Programming<br>Array Methods</h3>
+        </div>
+    </header>
+    <div class="links">
+        <div class="container">
+            <p id=outA></p>
+            <p>
+                i = <input type=number id=ie value=1  style="width:40px"> &emsp; 
+                x = <input type=text id=xe value=53 style="width:99px"> 
+            </p>
+            <p>
+                <input type=button value="a[i]=x"  onClick="modify()">
+                <input type=button value="remove"  onClick="remove()">
+                <input type=button value="push x"  onClick="push()">
+                <input type=button value="x=pop"   onClick="popA()">
+                <br><br>
+                <input type=button value="reverse" onClick="reverse()">
+                <input type=button value="remove first" onClick="shift()">
+                <input type=button value="fill x"  onClick="fill()">
+                <input type=button value="add first x"  onClick="unshift()">
+            </p>
+            <hr />
+            <p>Ref: 
+                <a href="https://www.w3schools.com/js/js_arrays.asp"  target="ExternalDocument">Array Examples</a>
+            </p>
+            <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections" target="ExternalDocument">Set Examples</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        const a = ["234", 52, "abc"];  //initially
+        reportA("start");
+    </script>
+    <footer>
+        <div class="container">
+            <h5>© 2018 Bedirhan YILDIRIM, All Rights Reserved</h5>
+        </div>
+    </footer>
 </body>
 </html>

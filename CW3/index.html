@@ -7,40 +7,54 @@
           rel="stylesheet" media="all">
     <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
     <script src="c3_data.js"></script>
-    <title>Inspector </title>
+    <title>Adv Prog | Inspector</title>
+    <link rel="shortcut icon" href="../icons/icon192.png">
+    <link rel="icon" sizes="192x192" href="../icons/icon192.png">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
-
 <body>
-<p><b id=docName></b> &nbsp;
-<a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
-<a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
-</p>
-
-<script>
-"use strict";
-var a, c, code;  //global variables
-function init() {
-    let s = "Small is beautiful", d = new Date(),
-       len = 123, name = "Circle", pi = Math.PI, 
-       sqrt = Math.sqrt, power = Math.pow;
-    a = [0, 11, "22", "abc"];
-    c = {len, name, pi, sqrt, power};
-    let menu = {s, d, a, c, window, JOURNAL, EVENTS};
-    MENU = new Chap4(); //global
-    for (let k in menu) MENU[k] = menu[k];
-    display(MENU); 
-}
-    docName.innerText = document.title+" "+VERSION;
-    try {
-        inspect(document.body, init); //makes the table
-        //inp.value = "new Number(c.pi)";
-        code = document.createElement("pre");
-        document.body.appendChild(code);
-        code.innerText = Entry;
-    } catch(e) {
-        reportError(e);
-    }
-</script>
-
+    <header>
+        <div class="container">
+            <h3>Advanced Programming<br>Inspector</h3>
+        </div>
+    </header>
+    <div class="links">
+        <div class="container">
+            <p style="text-align: center;"><b id=docName></b> &nbsp;
+            <a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
+            <a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
+            </p>
+            <script>
+                "use strict";
+                var a, c, code;  //global variables
+                function init() {
+                    let s = "Small is beautiful", d = new Date(),
+                    len = 123, name = "Circle", pi = Math.PI, 
+                    sqrt = Math.sqrt, power = Math.pow;
+                    a = [0, 11, "22", "abc"];
+                    c = {len, name, pi, sqrt, power};
+                    let menu = {s, d, a, c, window, JOURNAL, EVENTS};
+                    MENU = new Chap4(); //global
+                    for (let k in menu) MENU[k] = menu[k];
+                    display(MENU); 
+                }
+                docName.innerText = "Inspector "+VERSION;
+                try {
+                    inspect(document.body, init); //makes the table
+                    //inp.value = "new Number(c.pi)";
+                    code = document.createElement("pre");
+                    document.body.appendChild(code);
+                    code.innerText = Entry;
+                } catch(e) {
+                    reportError(e);
+                }
+            </script>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <h5>© 2018 Bedirhan YILDIRIM, All Rights Reserved</h5>
+        </div>
+    </footer>
 </body>
 </html>
